@@ -61,6 +61,7 @@ public class App extends Application implements EventHandler<ActionEvent> {
             // Calcolo delle mosse possibili e delle matrici successive alla mossa scelta
             map.startClass(matrixFx.getMatrix());
 
+            map.printMap();
             // Aggiunta fatti , sia blocchi già esistenti che mosse possibili
             addPossibleBlockToProgram(variableProgram, map);
             addExistingBlock(variableProgram);
@@ -176,6 +177,7 @@ public class App extends Application implements EventHandler<ActionEvent> {
         try {
             ASPMapper.getInstance().registerClass(Block.class);
             ASPMapper.getInstance().registerClass(newBlock.class);
+            ASPMapper.getInstance().registerClass(ExistingBlock.class);
         } catch (ObjectNotValidException | IllegalAnnotationException e1) {
             e1.printStackTrace();
         }
