@@ -61,7 +61,6 @@ public class App extends Application implements EventHandler<ActionEvent> {
             // Calcolo delle mosse possibili e delle matrici successive alla mossa scelta
             map.startClass(matrixFx.getMatrix());
 
-            map.printMap();
             // Aggiunta fatti , sia blocchi già esistenti che mosse possibili
             addPossibleBlockToProgram(variableProgram, map);
             addExistingBlock(variableProgram);
